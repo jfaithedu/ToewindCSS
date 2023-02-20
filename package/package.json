@@ -1,0 +1,22 @@
+{
+  "name": "toewavecss",
+  "version": "1.0.1",
+  "description": "ToewaveCSS is the ultimate solution for developers and designers who want to take their TailwindCSS game to the next level. With ToewaveCSS, you can write custom utilities, components, and base classes anywhere in your CSS and use them with ease. Whether you're a seasoned pro or a beginner, ToewaveCSS makes it easy to unleash your creativity and streamline your workflow.",
+  "main": "toewave.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Tailwindcss",
+    "Intellisence",
+    "CSS",
+    "VSCode",
+    "Tailwind",
+    "Plugin"
+  ],
+  "author": "BigFoot",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}
