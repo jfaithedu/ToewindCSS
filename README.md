@@ -1,4 +1,4 @@
-<img src="./toewavecss-logo-header.png" width="100%"></img>
+<img src="https://github.com/jfaithedu/ToewindCSS/blob/main/assets/toewavecss-logo-header.png?raw=true" width="100%"></img>
 
 # Welcome to ToewaveCSS
 

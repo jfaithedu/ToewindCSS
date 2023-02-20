@@ -1,8 +1,8 @@
-<img src="./toewavecss-logo-header.png" width="100%"></img>
+<img src="https://github.com/jfaithedu/ToewindCSS/blob/main/assets/toewavecss-logo-header.png?raw=true" width="100%"></img>
 
 # Welcome to ToewaveCSS
 
-ToewaveCSS is the ultimate solution for developers and designers who want to take their TailwindCSS game to the next level. With ToewaveCSS, you can write custom utilities, components, and base classes anywhere in your CSS and use them with ease. Whether you're a seasoned pro or a beginner, ToewaveCSS makes it easy to unleash your creativity and streamline your workflow.
+ToewaveCSS is the ultimate solution for writing intellisence-friendly custom utilities, components, and base classes anywhere in your CSS and use them with ease. Whether you're a seasoned pro or a beginner, ToewaveCSS makes it easy to unleash your creativity and streamline your workflow.
 
 ## Installation
 
