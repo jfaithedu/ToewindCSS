@@ -1,13 +1,12 @@
 {
   "name": "toewavecss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ToewaveCSS enables developers and designers to write custom intellisense-friendly utilities, components, and base classes for TailwindCSS from any CSS file, and access them with ease. Whether you're a seasoned pro or a beginner, ToewaveCSS makes it easy to unleash your creativity and streamline your workflow.",
   "main": "toewave.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-"homepage": "https://github.com/jfaithedu/ToewindCSS#readme",
-  // add github https://github.com/jfaithedu/ToewindCSS
+  "homepage": "https://github.com/jfaithedu/ToewindCSS#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jfaithedu/ToewindCSS.git"

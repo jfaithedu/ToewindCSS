@@ -22,7 +22,7 @@ module.exports = {
   // (...)
   plugins: [
     // (...),
-    require("./toewave.js"),
+    require("toewavecss"),
   ],
   toewave: {
     cssPath: "./src/styles",
