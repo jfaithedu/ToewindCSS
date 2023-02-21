@@ -6,7 +6,9 @@ ToewaveCSS is the ultimate solution for writing intellisence-friendly custom uti
 
 ## Installation
 
-To install ToewaveCSS, you must have a TailwindCSS installation already set up. To install the plugin, simply run the following command:
+To install ToewaveCSS, you must have a TailwindCSS installation already set up, with <a href="https://github.com/postcss/postcss-import">postcss-import</a> configured. <a href="https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports">(see tailwind docs)</a>
+
+To install the plugin, simply run the following command:
 
 ```shell
 $ npm install toewavecss
