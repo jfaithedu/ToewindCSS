@@ -65,25 +65,31 @@ function parseCSSFileContents(cssFileContents) {
 
   const processClassString = (classString) => {
     const className = classString.match(/\.([\w-]+)/)[1];
-    const classDeclarations = classString.match(CSS_CLASS_DECLARATION_PATTERN);
     const applyDeclarations = classString.match(TW_APPLY_PATTERN);
+    // remove any @apply declarations from classString
+    /* let stringLeft = classString;
+    applyDeclarations.map((string) => {
+      stringLeft.replace(string, "");
+    }); */
+
+    const classDeclarations = stringLeft.match(CSS_CLASS_DECLARATION_PATTERN);
+
     if (!classDeclarations && !applyDeclarations) return {};
 
     const classObject = {};
+
+    if (applyDeclarations?.map) {
+      applyDeclarations.map((applyDeclaration) => {
+        classObject[applyDeclaration.replace(";", "").trim()] = {};
+      });
+    }
     if (classDeclarations?.map) {
       classDeclarations.map((classDeclaration) => {
         const [property, value] = classDeclaration.split(":");
         classObject[property.trim()] = value.replace(";", "").trim();
       });
     }
-    if (applyDeclarations?.map) {
-      applyDeclarations.map((applyDeclaration) => {
-        const [property, value] = applyDeclaration.split(":");
-        classObject[property.replace(";", "").trim()] = value?.trim
-          ? value.trim()
-          : {};
-      });
-    }
+
     return { [`.${className}`]: classObject };
   };
 
@@ -115,9 +121,10 @@ function parseCSSFileContents(cssFileContents) {
   const returnObject = {
     base: Object.assign(
       {},
-      ...classesByLayer.base.map((classString) =>
-        processClassString(classString)
-      )
+      ...classesByLayer.base.map((classString) => {
+        console.log("base.map=>\n", classString);
+        return processClassString(classString);
+      })
     ),
     components: Object.assign(
       {},
@@ -193,7 +200,7 @@ function parseCSSDirectory(directoryPath) {
 module.exports = plugin.withOptions(() => {
   const config = loadConfig();
   const { base, components, utilities } = parseCSSDirectory(config.cssPath);
-  console.log(base, components, utilities, "parsedCSS");
+  console.log("parsedCSS", base, components, utilities);
   return function ({ addBase, addUtilities, addComponents }) {
     if (components) addComponents(components);
     if (utilities) addUtilities(utilities);
