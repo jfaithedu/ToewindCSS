@@ -50,7 +50,8 @@ const LAYER_UTILITIES_PATTERN =
 // CLASS_OBJECT_PATTERN matches '.className { ... }' patterns
 const CSS_CLASS_OBJECT_PATTERN = /\.([\w-]+)\s*{\s*([\s\S]*?)\s*}/gm;
 // CLASS_DECLARATION_PATTERN matches 'property: value;' patterns
-const CSS_CLASS_DECLARATION_PATTERN = /([\w-]+)\s*:\s*([\*\#\d\(\)\w-]+)\s*;/gm;
+const CSS_CLASS_DECLARATION_PATTERN =
+  /(?<=;\s*|{\s*)([\w-]+)\s*:\s*([\*\#\d\(\)\w-]+)\s*;/gm;
 // TW_APPLY_PATTERN matches '@apply' patterns
 const TW_APPLY_PATTERN = /@apply\s+([\:\[\]\(\)\-\d\w\s-]+)\s*;/gm;
 const newLineRegex = /\n/gm;
