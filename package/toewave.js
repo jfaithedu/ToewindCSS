@@ -66,13 +66,8 @@ function parseCSSFileContents(cssFileContents) {
   const processClassString = (classString) => {
     const className = classString.match(/\.([\w-]+)/)[1];
     const applyDeclarations = classString.match(TW_APPLY_PATTERN);
-    // remove any @apply declarations from classString
-    /* let stringLeft = classString;
-    applyDeclarations.map((string) => {
-      stringLeft.replace(string, "");
-    }); */
 
-    const classDeclarations = stringLeft.match(CSS_CLASS_DECLARATION_PATTERN);
+    const classDeclarations = classString.match(CSS_CLASS_DECLARATION_PATTERN);
 
     if (!classDeclarations && !applyDeclarations) return {};
 
